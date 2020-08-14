@@ -1,2 +1,6 @@
 # Peopleandthings
 A Java Program that processes a CSV file and inputs into a SQLite database
+I ran the program in ecclipse with the CSV file in the same directory and the jar file built into the ecclipse project directory.
+Once everything is in the appropriate directories press run and the ouput files will appear in the directory.
+The purpose of the repo is to display the project.
+To read the CSV file I used the scanner delimiting with the \n character since the each entrie was a separate line.  Then I separated the individual data points with the split() function using , as a delimiter.  This would allow me to put the entries into an array where I then checked for empty data points.  Keeping track of the encountering of empty data was done with a boolean empty variable which was set to true when an empty string was encountered in the array. If empty data was detected each index of the array would be added to the failed string which was then later used to write to the failed.csv file.  If the data was complete for the entry each index of the array was inserted into the table appropriately.  Once reading the file was done the failed string was written to the failed.csv file and the statistics written to the numbers.log file.  As part of debugging and quality assurance the program prints the first 50 line arrays and the first 50 entries of the database.
